@@ -1,6 +1,10 @@
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import LoanCalculator from './LoanCalculator'
+import LoanCalculator from './pages/Home'
+import Home from './pages/Home'
+import About from './pages/About'
+
 
 function App() {
  
@@ -8,7 +12,10 @@ function App() {
   return (
     <div className='overflow-hidden'>
    
-   <LoanCalculator />
+   <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
     </div>
   )
 }

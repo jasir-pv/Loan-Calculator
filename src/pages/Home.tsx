@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import {
   Table,
   TableBody,
@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./components/ui/table";
+} from "../components/ui/table";
 
 interface AmortizationItem {
   month: number;
@@ -16,7 +16,7 @@ interface AmortizationItem {
   balance: string;
 }
 
-const LoanCalculator = () => {
+const Home = () => {
   const [loanAmount, setLoanAmount] = useState<number>(100000);
   const [interestRate, setInterestRate] = useState<number>(8.5);
   const [term, setTerm] = useState<number>(5);
@@ -52,7 +52,7 @@ const LoanCalculator = () => {
     let balance = principal;
     const schedule: AmortizationItem[] = [];
 
-    for (let month = 1; month <= payments && month <= 3; month++) {
+    for (let month = 1; month <= payments ; month++) {
       const interest = balance * monthlyRate;
       const principalPayment = monthlyPayment - interest;
       balance -= principalPayment;
@@ -73,9 +73,15 @@ const LoanCalculator = () => {
     calculateLoan();
   };
 
-  const handleReset = () =>{
-    
-  }
+  const handleReset = () => {
+    setLoanAmount(100000);
+    setInterestRate(8.5);
+    setTerm(5);
+    setMonthlyPayment('');
+    setCurrency('USD');
+    setAmortizationSchedule([]);
+  };
+  
 
   return (
     <div className="h-full w-full bg-gray-100">
@@ -89,7 +95,7 @@ const LoanCalculator = () => {
 
           {/*  Calculator  Calculator Calculator*/}
 
-          <div className="w-full bg-white rounded shadow p-5 sm:p-10 sm:w-[100px]">
+          <div className="w-full h-full bg-white rounded shadow p-5 sm:p-10 ">
             <h2 className="text-lg font-bold border-b pb-2 mb-6 sm:text-2xl">Loan Calculator Dashboard</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6 mb-6">
@@ -199,4 +205,4 @@ const LoanCalculator = () => {
   );
 };
 
-export default LoanCalculator;
+export default Home;
