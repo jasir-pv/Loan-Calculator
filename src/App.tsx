@@ -4,6 +4,7 @@ import './App.css'
 import LoanCalculator from './pages/Home'
 import Home from './pages/Home'
 import About from './pages/About'
+import Exchange from './pages/Exchange'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
    <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/exchange" element={<Exchange />} />
     </Routes>
     </div>
   )

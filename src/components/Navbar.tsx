@@ -9,7 +9,7 @@ const Navbar = (props: Props) => {
   const { isDark, toggleTheme } = useTheme();
 
   return (
-    <header className={`shadow-md ${isDark ? 'bg-gray-800' : 'bg-blue-600'}`}>
+    <header className={`shadow-md ${isDark ? 'bg-gray-700' : 'bg-blue-600'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <h1 className={`text-lg font-extrabold ${isDark ? 'text-white' : 'text-white'} tracking-wide sm:text-2xl`}>
           Loan Calculator
@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
         <ul className={`hidden md:flex space-x-6 items-center ${isDark ? 'text-white' : 'text-white'}`}>
           <li>
             <a
-              href="#"
+              href="/"
               className={`font-semibold hover:bg-blue-800 transition duration-300 px-4 py-2 rounded-md`}
             >
               Home
@@ -34,7 +34,7 @@ const Navbar = (props: Props) => {
           </li>
           <li>
             <a
-              href="#"
+              href="/exchange"
               className={`font-semibold hover:bg-blue-800 transition duration-300 px-4 py-2 rounded-md`}
             >
               Exchange Rates
