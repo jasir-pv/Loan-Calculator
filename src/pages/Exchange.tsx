@@ -51,7 +51,7 @@ const Exchange = ({ emi }: Props) => {
 <Navbar />
 
     <div className="bg-white dark:bg-gray-800 rounded shadow p-6   h-screen">
-      <h2 className="text-lg font-semibold border-b pb-2 mb-4 text-gray-800 dark:text-gray-200">
+      <h2 className="text-lg font-semibold border-b pb-2 mb-4 text-gray-800 dark:text-gray-200 ">
         Live Exchange Rates (USD)
       </h2>
 

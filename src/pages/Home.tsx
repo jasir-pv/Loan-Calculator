@@ -89,7 +89,7 @@ const Home = () => {
     <div className={`h-screen w-full ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
       <Navbar />
 
-      <div className={`container mx-auto p-4 md:p-6 w-full  flex justify-center overflow-hidden ${isDark ? 'text-white' : 'text-black'}`}>
+      <div className={`container mx-auto p-4 md:p-6 w-full  flex justify-center overflow-hidden`}>
         <div className="flex flex-col lg:flex-row gap-6 w-full  justify-center">
 
           {/*  Calculator  Calculator Calculator*/}
