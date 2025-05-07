@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useTheme } from './ui/Theme';
 
-type Props = {};
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
 
