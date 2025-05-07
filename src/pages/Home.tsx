@@ -86,7 +86,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`h-screen w-full ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
+    <div className={`h-screen overflow-auto w-full ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
       <Navbar />
 
       <div className={`container mx-auto p-4 md:p-6 w-full  flex justify-center overflow-hidden`}>
